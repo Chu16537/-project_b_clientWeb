@@ -1,0 +1,24 @@
+{
+  "en": {
+    "menu.member": "Member",
+    "menu.game": "Game Introduction",
+    "menu.deposit": "Deposit",
+    "menu.support": "Customer Support",
+    "status": "Status",
+    "totalBet": "TotalBet",
+    "totalPay": "Total Pay",
+    "todayBet": "Today Bet",
+    "todayPay": "Today Pay"
+  },
+  "zh-tw": {
+    "menu.member": "會員功能",
+    "menu.game": "遊戲介紹",
+    "menu.deposit": "儲值",
+    "menu.support": "客服",
+    "status": "狀態",
+    "totalBet": "總下注",
+    "totalPay": "總派彩",
+    "todayBet": "今日下注",
+    "todayPay": "今日派彩"
+  }
+}
