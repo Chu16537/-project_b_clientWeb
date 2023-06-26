@@ -20,7 +20,8 @@ function basePost (path = '', request) {
         data.data = res.data
         return data
     }).catch((err) => {
-        return err
+        console.log('post fail', err)
+        return data
     })
 }
 
@@ -30,13 +31,12 @@ function baseGet (path = '', params) {
     }
 
     return apiClient.get(path, { params }).then((res) => {
-        console.log(params)
         data.isSuccess = true
         data.data = res.data
         return data
     }).catch((err) => {
-        console.log('aaa', params)
-        return err
+        console.log('get fail', err)
+        return data
     })
 }
 

@@ -3,8 +3,12 @@ import { NowLang } from '@/script/localStorage'
 
 export default createStore({
     state: {
-        user: null,
+        // user: null,
+        user: {
+            token: 'aaa'
+        },
         homeData: null,
+        gameIds: [],
         memberData: null,
         currentLanguage: NowLang()
     },
@@ -17,6 +21,9 @@ export default createStore({
         },
         setHomeData (state, data) {
             state.homeData = data
+        },
+        setGameIds (state, data) {
+            state.gameIds = data
         },
         setMember (state, data) {
             state.memberData = data
@@ -31,6 +38,9 @@ export default createStore({
         },
         setHomeData ({ commit }, data) {
             commit('setHomeData', data)
+        },
+        setGameIds ({ commit }, data) {
+            commit('setGameIds', data)
         },
         setMember ({ commit }, data) {
             commit('setMember', data)

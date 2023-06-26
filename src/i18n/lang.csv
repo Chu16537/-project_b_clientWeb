@@ -1,10 +1,42 @@
-key,en,zh-tw
-menu.member,Member,會員功能
-menu.game,Game Introduction,遊戲介紹
-menu.deposit,Deposit,儲值
-menu.support,Customer Support,客服
-status,Status,狀態
-totalBet,TotalBet,總下注
-totalPay,Total Pay,總派彩
-todayBet,Today Bet,今日下注
-todayPay,Today Pay,今日派彩
+key,en,zh_tw
+member,member,會員
+game_introduction,game introduction,遊戲介紹
+customer_support,customer support,客服
+status,status,狀態
+total_bet,total bet,總下注
+total_pay,total pay,總派彩
+today_bet,today bet,今日下注
+today_pay,today pay,今日派彩
+game_name_1,game name 1,遊戲名稱 1
+game_name_2,game name 2,遊戲名稱 2
+game_name_3,game name 3,遊戲名稱 3
+login,login,登入
+account,account,帳號
+password,password,密碼
+nickname,Nickname ,暱稱
+rank,rank,排名
+select_date,select date,選擇日期
+select_game,select game,選擇遊戲
+today,today,今日
+yesterday,yesterday,昨日
+last_week,last week,上週
+last_month,last month,上個月
+all,all,全部
+date_fail,date fail,時間錯誤
+choose_one_game,choose at least one game,至少選擇一款遊戲
+login_failed,login failed,登入失敗
+request_failed,request failed,請求失敗
+error,error,錯誤
+date,date,日期
+gameName,game name,遊戲名稱
+gameId,gameID,遊戲局號
+betAmount,bet amount,下注金額
+effectiveBetAmount,effective bet amount,有效投注額
+payoutAmount,payout amount,派彩金額
+winLossResult,win lor oss result,勝負結果
+gameResul,game resul,牌局結果
+dragon,Dragon,龍
+tiger,Tiger,虎
+winZone,Win Zone,贏分區
+betZone,Bet Zone,下注區
+payZone,Pay Zone,派採區

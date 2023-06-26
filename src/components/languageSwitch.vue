@@ -1,11 +1,11 @@
 <template>
-    <div class="language-select">
+
         <select @change="changeLanguage" v-model="selectedLanguage">
             <option v-for="item in langs" :value="item.key" :key="item.key">
                 {{ item.value }}
             </option>
         </select>
-    </div>
+
 </template>
 
 <script>
@@ -22,7 +22,7 @@ export default {
                     value: 'English'
                 },
                 {
-                    key: 'zh-tw',
+                    key: 'zh_tw',
                     value: '中文(繁體)'
                 }
             ]
@@ -39,11 +39,6 @@ export default {
 </script>
 
 <style scoped>
-.language-select {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
 
 select {
   background-color: #ffffff;

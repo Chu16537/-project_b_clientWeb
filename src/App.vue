@@ -1,31 +1,39 @@
 <template>
+    <div class="app">
 
-    <!-- 使用 languageSwitch 組件 -->
-    <language-switch @event-changeLang="changeLang"></language-switch>
+        <topMenu v-if="isUpdateLang && !hideTopMenu" :changeLang="changeLang"></topMenu>
+        <div class="header"></div>
 
-    <topMenu v-if="isUpdateLang"></topMenu>
+        <router-view v-if="isUpdateLang" ></router-view>
 
-    <router-view v-if="isUpdateLang" />
+        <div v-if="!hidStartButton" class="startButton">
+            <startButton></startButton>
+        </div>
+
+    </div>
 
 </template>
 
 <script>
-import languageSwitch from '@/components/languageSwitch.vue'
 import topMenu from '@/components/topMenu.vue'
+import startButton from '@/components/startButton.vue'
 
 export default {
+
     provide () {
         return {
             updateLang: this.updateLang
         }
     },
     components: {
-        languageSwitch,
-        topMenu
+        topMenu,
+        startButton
     },
     data () {
         return {
-            isUpdateLang: true
+            isUpdateLang: true,
+            hideTopMenu: false,
+            hidStartButton: false
         }
     },
     methods: {
@@ -39,9 +47,41 @@ export default {
                 this.isUpdateLang = true
             })
         }
+    },
+    created () {
+        this.$router.beforeEach((to, from, next) => {
+            this.hideTopMenu = to.meta.hideTopMenu === true
+            this.hidStartButton = to.meta.hidStartButton === true
+            next()
+        })
     }
 }
+
 </script>
 
-<style lang="scss">
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    background-image: url('@/assets/bg.jpeg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.app {
+    height: 100%;
+}
+
+.header {
+    height: 200px;
+}
+
+.startButton {
+    padding-bottom: 100px;
+    background-color: transparent;
+}
 </style>
